@@ -13,12 +13,13 @@ C:\Users\Abdalla Way\source\repos\inventory\inventory\obj\Debug\inventory.regist
 C:\Users\Abdalla Way\Desktop\inventory\inventory\bin\Debug\inventory.exe.config
 C:\Users\Abdalla Way\Desktop\inventory\inventory\bin\Debug\inventory.exe
 C:\Users\Abdalla Way\Desktop\inventory\inventory\bin\Debug\inventory.pdb
-C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csproj.AssemblyReference.cache
-C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csproj.SuggestedBindingRedirects.cache
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Form1.resources
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Properties.Resources.resources
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.register.resources
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csproj.GenerateResource.cache
-C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csproj.CoreCompileInputs.cache
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.exe
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.pdb
+C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Dashboard.resources
+C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.frmSettings.resources
+C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csprojResolveAssemblyReference.cache
+C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Products.resources
