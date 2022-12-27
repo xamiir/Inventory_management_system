@@ -33,8 +33,14 @@ namespace inventory
                 sda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
                 {
-                  
-                    MessageBox.Show("welcome home page");
+
+                    //MessageBox.Show("welcome home page");
+                   
+                    this.Hide();
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.ShowDialog();
+                    this.Close();
+
                 }
                 else
                     MessageBox.Show("Invalid username or password");

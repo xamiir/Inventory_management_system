@@ -32,26 +32,53 @@ namespace inventory
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            
-            
-               
 
-            if (itemNametxt.Text == "" || categorytxt.Text == "" || quantity.Text == "" || price.Text == "" )
+
+            try
             {
-                MessageBox.Show("please fill the cell first");
+
+
+                if (IdTxt.Text == "" || itemNametxt.Text == "" || categorytxt.Text == "" || quantitytxt.Text == "" || pricetxt.Text == "")
+                {
+                    MessageBox.Show("please fill the cell first");
+                }
+                else
+                {
+                    double price = double.Parse(pricetxt.Text.ToString());
+                    int quant = int.Parse(quantitytxt.Text.ToString());
+                    double amount = price * quant;
+
+
+
+                    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-21OPG07;Initial Catalog=MyDB;Integrated Security=True");
+
+                    string query2 = "select * from Addproducts where id = @id";
+                    SqlCommand cmd2 = new SqlCommand(query2, con);
+                    cmd2.Parameters.AddWithValue("@id", IdTxt.Text);
+                    con.Open();
+                    SqlDataReader dr = cmd2.ExecuteReader();
+                    if (dr.HasRows == true)
+                    {
+                        MessageBox.Show(IdTxt.Text + " ID already Exists !!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        con.Close();
+                    }
+                    else
+                    {
+                        conn.Open();
+                        SqlDataAdapter sda = new SqlDataAdapter("insert into Addproducts(id,itemName,category,quantity,price,Amout)values('" + IdTxt.Text.ToString() + "','" + itemtxt.Text + "','" + categorytxt.Text + "','" + quantitytxt.Text.ToString() + "','" + pricetxt.Text.ToString() + "','"+amount+"')", conn);
+                        sda.SelectCommand.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("data entered succesfully. . . .");
+                       // con.Close();
+                    }
+                 
+                }
             }
-            else
+            catch (Exception ex)
             {
-                conn.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("insert into Addproducts(itemName,category,quantity,price)values('" + itemtxt.Text + "','" + categorytxt.Text + "','" + quantitytxt.Text.ToString() + "','" + pricetxt.Text.ToString() +  "')", conn);
 
-                sda.SelectCommand.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("data entered succesfully. . . .");
-              
-
+                MessageBox.Show("Exception: " + ex.Message);
             }
-
         }
 
         private void veiwtxt_Click(object sender, EventArgs e)
@@ -88,27 +115,45 @@ namespace inventory
 
         private void deletebnt_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-21OPG07;Initial Catalog=MyDB;Integrated Security=True");
-            string query = "update Addproducts set itemName = @itemName, category = @category, quantity = @quantity, price = @price where price = @price";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@itemName",itemtxt.Text );
-            cmd.Parameters.AddWithValue("@category", categorytxt.Text);
-            cmd.Parameters.AddWithValue("@quantity", quantitytxt.Text);
-            cmd.Parameters.AddWithValue("@price", pricetxt.Text);
-            con.Open();
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-21OPG07;Initial Catalog=MyDB;Integrated Security=True");
 
-            int a = cmd.ExecuteNonQuery();
-            if (a > 0)
-            {
-                MessageBox.Show("Updated Successfully !!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                if (IdTxt.Text == "" || itemNametxt.Text == "" || categorytxt.Text == "" || quantitytxt.Text == "" || pricetxt.Text == "")
+                {
+                    MessageBox.Show("please fill the cell first");
+                }
+                else
+                {
+                    string query = "update Addproducts set id = @id , itemName = @itemName, category = @category, quantity = @quantity, price = @price where id = @id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", IdTxt.Text);
+                    cmd.Parameters.AddWithValue("@itemName", itemtxt.Text);
+                    cmd.Parameters.AddWithValue("@category", categorytxt.Text);
+                    cmd.Parameters.AddWithValue("@quantity", quantitytxt.Text);
+                    cmd.Parameters.AddWithValue("@price", pricetxt.Text);
+                    con.Open();
+
+                    int a = cmd.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        MessageBox.Show("Updated Successfully !!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Updation Failed !!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    con.Close();
+                }
+
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Updation Failed !!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show("Exception: " + ex.Message);
             }
-            con.Close();
-            
         }
 
         private void itemNametxt_Click(object sender, EventArgs e)
@@ -126,13 +171,13 @@ namespace inventory
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-21OPG07;Initial Catalog=MyDB;Integrated Security=True");
             string query = "select * from Addproducts where itemName like @itemName + '%'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            if (itemtxt.Text == "")
+            if (searchingtxt.Text == "")
             {
                 MessageBox.Show("Enter itemName");
             }
             else
             {
-                sda.SelectCommand.Parameters.AddWithValue("@itemName", itemtxt.Text.Trim());
+                sda.SelectCommand.Parameters.AddWithValue("@itemName", searchingtxt.Text.Trim());
                 DataTable data = new DataTable();
                 sda.Fill(data);
                 if (data.Rows.Count > 0)
@@ -148,7 +193,68 @@ namespace inventory
            
            
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Deletebnt_Click_1(object sender, EventArgs e)
+        {
+
+            if (IdTxt.Text == "" || itemNametxt.Text == "" || categorytxt.Text == "" || quantitytxt.Text == "" || pricetxt.Text == "")
+            {
+                MessageBox.Show("please fill the cell first");
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-21OPG07;Initial Catalog=MyDB;Integrated Security=True");
+                string query = "delete from Addproducts where id = @id";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", IdTxt.Text);
+
+                con.Open();
+
+                int a = cmd.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Deleted Successfully !!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Deletion Failed !!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                con.Close();
+
+            }
+        }
+
+        private void IdTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pricetxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Amouttxt_TextChanged(object sender, EventArgs e)
+        {
+
+            // pricetxt.Text = double.Parse(pricetxt.Text).ToString();
+          
+            
+
+
+
+
+
+
+        }
     }
 }
+
     
 

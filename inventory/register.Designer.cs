@@ -30,13 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.sAnswertxt = new System.Windows.Forms.TextBox();
             this.sQuestiontxt = new System.Windows.Forms.TextBox();
-            this.rDatetxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,22 +47,24 @@
             this.passwordtxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.userNametxt = new System.Windows.Forms.TextBox();
-            this.Registerbnt = new System.Windows.Forms.Button();
             this.User = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Registerbnt = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(-7, -3);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(906, 90);
+            this.label1.Size = new System.Drawing.Size(906, 74);
             this.label1.TabIndex = 8;
             this.label1.Text = "Add User";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,6 +72,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -78,7 +82,6 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.sAnswertxt);
             this.groupBox1.Controls.Add(this.sQuestiontxt);
-            this.groupBox1.Controls.Add(this.rDatetxt);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label7);
@@ -93,39 +96,36 @@
             this.groupBox1.Controls.Add(this.Registerbnt);
             this.groupBox1.Controls.Add(this.User);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(-2, 109);
+            this.groupBox1.Location = new System.Drawing.Point(-2, 102);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(901, 319);
+            this.groupBox1.Size = new System.Drawing.Size(901, 326);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add User";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button2
+            // label13
             // 
-            this.button2.Image = global::inventory.Properties.Resources.close_window_24px;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(701, 249);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 35);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label13.Location = new System.Drawing.Point(184, 165);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(204, 19);
+            this.label13.TabIndex = 52;
             // 
-            // button1
+            // label5
             // 
-            this.button1.Image = global::inventory.Properties.Resources.broom_24px;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(580, 249);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 35);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label5.Location = new System.Drawing.Point(8, 295);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 21);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Log Out";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
@@ -166,15 +166,6 @@
             this.sQuestiontxt.Size = new System.Drawing.Size(255, 29);
             this.sQuestiontxt.TabIndex = 45;
             // 
-            // rDatetxt
-            // 
-            this.rDatetxt.Location = new System.Drawing.Point(598, 189);
-            this.rDatetxt.Margin = new System.Windows.Forms.Padding(5);
-            this.rDatetxt.Name = "rDatetxt";
-            this.rDatetxt.Size = new System.Drawing.Size(255, 29);
-            this.rDatetxt.TabIndex = 44;
-            this.rDatetxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // label12
             // 
             this.label12.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -194,6 +185,7 @@
             this.label11.Size = new System.Drawing.Size(124, 21);
             this.label11.TabIndex = 42;
             this.label11.Text = "Register Date";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label7
             // 
@@ -217,13 +209,15 @@
             // 
             // label9
             // 
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label9.Location = new System.Drawing.Point(154, 223);
+            this.label9.Location = new System.Drawing.Point(170, 223);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(178, 21);
+            this.label9.Size = new System.Drawing.Size(261, 21);
             this.label9.TabIndex = 39;
-            this.label9.Text = "password not match";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -242,6 +236,7 @@
             this.confptxt.Name = "confptxt";
             this.confptxt.Size = new System.Drawing.Size(250, 29);
             this.confptxt.TabIndex = 37;
+            this.confptxt.TextChanged += new System.EventHandler(this.confptxt_TextChanged);
             // 
             // label6
             // 
@@ -255,11 +250,12 @@
             // 
             // passwordtxt
             // 
-            this.passwordtxt.Location = new System.Drawing.Point(181, 155);
+            this.passwordtxt.Location = new System.Drawing.Point(181, 136);
             this.passwordtxt.Margin = new System.Windows.Forms.Padding(5);
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(250, 29);
             this.passwordtxt.TabIndex = 35;
+            this.passwordtxt.TextChanged += new System.EventHandler(this.passwordtxt_TextChanged);
             // 
             // label4
             // 
@@ -278,20 +274,7 @@
             this.userNametxt.Name = "userNametxt";
             this.userNametxt.Size = new System.Drawing.Size(250, 29);
             this.userNametxt.TabIndex = 33;
-            // 
-            // Registerbnt
-            // 
-            this.Registerbnt.Image = global::inventory.Properties.Resources.registered_trademark_24px;
-            this.Registerbnt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Registerbnt.Location = new System.Drawing.Point(468, 249);
-            this.Registerbnt.Margin = new System.Windows.Forms.Padding(5);
-            this.Registerbnt.Name = "Registerbnt";
-            this.Registerbnt.Size = new System.Drawing.Size(102, 35);
-            this.Registerbnt.TabIndex = 32;
-            this.Registerbnt.Text = "Register";
-            this.Registerbnt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Registerbnt.UseVisualStyleBackColor = true;
-            this.Registerbnt.Click += new System.EventHandler(this.Registerbnt_Click);
+            this.userNametxt.TextChanged += new System.EventHandler(this.userNametxt_TextChanged);
             // 
             // User
             // 
@@ -311,23 +294,66 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "first_name:";
             // 
-            // label5
+            // dateTimePicker1
             // 
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label5.Location = new System.Drawing.Point(8, 295);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 21);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "Log Out";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.dateTimePicker1.Location = new System.Drawing.Point(598, 184);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(255, 29);
+            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::inventory.Properties.Resources.close_window_24px;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(701, 249);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 35);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::inventory.Properties.Resources.broom_24px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(580, 249);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 35);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Registerbnt
+            // 
+            this.Registerbnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.Registerbnt.ForeColor = System.Drawing.Color.White;
+            this.Registerbnt.Image = global::inventory.Properties.Resources.registered_trademark_24px;
+            this.Registerbnt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Registerbnt.Location = new System.Drawing.Point(468, 249);
+            this.Registerbnt.Margin = new System.Windows.Forms.Padding(5);
+            this.Registerbnt.Name = "Registerbnt";
+            this.Registerbnt.Size = new System.Drawing.Size(102, 35);
+            this.Registerbnt.TabIndex = 32;
+            this.Registerbnt.Text = "Register";
+            this.Registerbnt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Registerbnt.UseVisualStyleBackColor = false;
+            this.Registerbnt.Click += new System.EventHandler(this.Registerbnt_Click);
             // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(895, 425);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -364,10 +390,11 @@
         public System.Windows.Forms.TextBox userNametxt;
         public System.Windows.Forms.TextBox User;
         public System.Windows.Forms.TextBox confptxt;
-        public System.Windows.Forms.TextBox rDatetxt;
         public System.Windows.Forms.TextBox sAnswertxt;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.TextBox sQuestiontxt;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

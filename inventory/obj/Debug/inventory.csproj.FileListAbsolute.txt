@@ -20,6 +20,6 @@ C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csproj.Gene
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.exe
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.pdb
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Dashboard.resources
-C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.frmSettings.resources
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csprojResolveAssemblyReference.cache
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Products.resources
+C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Oders.resources

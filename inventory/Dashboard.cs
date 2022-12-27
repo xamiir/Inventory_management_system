@@ -27,9 +27,26 @@ namespace inventory
         private void label6_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            new frmSettings().ShowDialog();
+            new Oders().ShowDialog();
             this.Close();
             
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.ShowDialog();
+            this.Close();
+           
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Products items =new Products();
+            items.ShowDialog();
+            this.Close();
         }
     }
 }

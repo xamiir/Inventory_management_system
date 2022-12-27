@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,28 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 581);
             this.panel1.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(0, 553);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(200, 28);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Logout";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(182, 23);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Inventory Dashboard";
             // 
             // label12
             // 
@@ -110,6 +88,19 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Users";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(0, 553);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(200, 28);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Logout";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -163,6 +154,7 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Items";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -176,6 +168,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Dashboard";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(182, 23);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Inventory Dashboard";
             // 
             // label10
             // 
