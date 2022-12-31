@@ -59,7 +59,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(-1, -1);
@@ -96,7 +96,7 @@
             // itemNametxt
             // 
             this.itemNametxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemNametxt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.itemNametxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.itemNametxt.Location = new System.Drawing.Point(12, 134);
             this.itemNametxt.Name = "itemNametxt";
             this.itemNametxt.Size = new System.Drawing.Size(104, 25);
@@ -107,7 +107,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(1, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 25);
@@ -117,7 +117,7 @@
             // quantity
             // 
             this.quantity.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.quantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.quantity.Location = new System.Drawing.Point(447, 135);
             this.quantity.Name = "quantity";
             this.quantity.Size = new System.Drawing.Size(84, 25);
@@ -128,38 +128,45 @@
             // price
             // 
             this.price.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.price.Location = new System.Drawing.Point(447, 199);
+            this.price.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.price.Location = new System.Drawing.Point(463, 191);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(71, 25);
+            this.price.Size = new System.Drawing.Size(51, 25);
             this.price.TabIndex = 8;
             this.price.Text = "price";
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(315, 255);
+            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddButton.ForeColor = System.Drawing.Color.White;
+            this.AddButton.Location = new System.Drawing.Point(351, 258);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(109, 31);
+            this.AddButton.Size = new System.Drawing.Size(91, 28);
             this.AddButton.TabIndex = 9;
             this.AddButton.Text = "AddItem";
-            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // veiwtxt
             // 
-            this.veiwtxt.Location = new System.Drawing.Point(451, 255);
+            this.veiwtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.veiwtxt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.veiwtxt.ForeColor = System.Drawing.Color.White;
+            this.veiwtxt.Location = new System.Drawing.Point(467, 258);
             this.veiwtxt.Name = "veiwtxt";
-            this.veiwtxt.Size = new System.Drawing.Size(109, 31);
+            this.veiwtxt.Size = new System.Drawing.Size(93, 28);
             this.veiwtxt.TabIndex = 11;
             this.veiwtxt.Text = "veiwData";
-            this.veiwtxt.UseVisualStyleBackColor = true;
+            this.veiwtxt.UseVisualStyleBackColor = false;
             this.veiwtxt.Click += new System.EventHandler(this.veiwtxt_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(-6, 292);
             this.dataGridView2.Name = "dataGridView2";
@@ -170,12 +177,15 @@
             // 
             // updatebnt
             // 
-            this.updatebnt.Location = new System.Drawing.Point(583, 255);
+            this.updatebnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.updatebnt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.updatebnt.ForeColor = System.Drawing.Color.White;
+            this.updatebnt.Location = new System.Drawing.Point(583, 258);
             this.updatebnt.Name = "updatebnt";
-            this.updatebnt.Size = new System.Drawing.Size(109, 31);
+            this.updatebnt.Size = new System.Drawing.Size(109, 28);
             this.updatebnt.TabIndex = 12;
             this.updatebnt.Text = "Update";
-            this.updatebnt.UseVisualStyleBackColor = true;
+            this.updatebnt.UseVisualStyleBackColor = false;
             this.updatebnt.Click += new System.EventHandler(this.deletebnt_Click);
             // 
             // searchingbtn
@@ -198,7 +208,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(435, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
@@ -216,7 +226,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(29, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 25);
@@ -226,19 +236,22 @@
             // 
             // Deletebnt
             // 
+            this.Deletebnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.Deletebnt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Deletebnt.ForeColor = System.Drawing.Color.White;
             this.Deletebnt.Location = new System.Drawing.Point(711, 258);
             this.Deletebnt.Name = "Deletebnt";
             this.Deletebnt.Size = new System.Drawing.Size(80, 28);
             this.Deletebnt.TabIndex = 18;
             this.Deletebnt.Text = "Delete";
-            this.Deletebnt.UseVisualStyleBackColor = true;
+            this.Deletebnt.UseVisualStyleBackColor = false;
             this.Deletebnt.Click += new System.EventHandler(this.Deletebnt_Click_1);
             // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(819, 490);
             this.Controls.Add(this.Deletebnt);
             this.Controls.Add(this.label4);
