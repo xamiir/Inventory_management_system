@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,11 +60,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSettings.cs">
+    <Compile Include="Orders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSettings.Designer.cs">
-      <DependentUpon>frmSettings.cs</DependentUpon>
+    <Compile Include="Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
     <Compile Include="Products.cs">
       <SubType>Form</SubType>
@@ -85,8 +86,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSettings.resx">
-      <DependentUpon>frmSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products.resx">
       <DependentUpon>Products.cs</DependentUpon>
