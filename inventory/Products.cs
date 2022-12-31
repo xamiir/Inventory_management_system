@@ -202,31 +202,40 @@ namespace inventory
         private void Deletebnt_Click_1(object sender, EventArgs e)
         {
 
-            if (IdTxt.Text == "" || itemNametxt.Text == "" || categorytxt.Text == "" || quantitytxt.Text == "" || pricetxt.Text == "")
+            if (IdTxt.Text == "")
             {
                 MessageBox.Show("please fill the cell first");
             }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-21OPG07;Initial Catalog=MyDB;Integrated Security=True");
-                string query = "delete from Addproducts where id = @id";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@id", IdTxt.Text);
-
-                con.Open();
-
-                int a = cmd.ExecuteNonQuery();
-                if (a > 0)
+                try
                 {
-                    MessageBox.Show("Deleted Successfully !!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-21OPG07;Initial Catalog=MyDB;Integrated Security=True");
+                    string query = "delete from Addproducts where id = @id";
+                    string orderQuery = "DELETE Orders where product = @id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    SqlCommand orderCMD = new SqlCommand(orderQuery, con);
+                    cmd.Parameters.AddWithValue("@id", IdTxt.Text);
+                    orderCMD.Parameters.AddWithValue("@id", IdTxt.Text);
 
-                }
-                else
+                    con.Open();
+                    orderCMD.ExecuteNonQuery();
+                    int a = cmd.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        MessageBox.Show("Deleted Successfully !!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Deletion Failed !!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    con.Close();
+
+                } catch (Exception ex)
                 {
-                    MessageBox.Show("Deletion Failed !!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Exception", ex.Message);
                 }
-                con.Close();
-
             }
         }
 

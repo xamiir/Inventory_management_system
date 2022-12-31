@@ -1,6 +1,6 @@
 ﻿namespace inventory
 {
-    partial class Oders
+    partial class Orders
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtProductId = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboProduct = new System.Windows.Forms.ComboBox();
+            this.lblCheckQuantity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,25 +55,16 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 107);
+            this.label2.Location = new System.Drawing.Point(53, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "ItemName";
             // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Category";
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(419, 123);
+            this.label5.Location = new System.Drawing.Point(419, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 4;
@@ -83,51 +73,39 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(419, 77);
+            this.label6.Location = new System.Drawing.Point(419, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 23);
             this.label6.TabIndex = 3;
             this.label6.Text = "Quantity";
             // 
-            // textBox1
+            // txtProductId
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 68);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 24);
-            this.textBox1.TabIndex = 5;
+            this.txtProductId.Location = new System.Drawing.Point(129, 68);
+            this.txtProductId.Multiline = true;
+            this.txtProductId.Name = "txtProductId";
+            this.txtProductId.ReadOnly = true;
+            this.txtProductId.Size = new System.Drawing.Size(272, 24);
+            this.txtProductId.TabIndex = 5;
             // 
-            // textBox2
+            // txtPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 107);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 23);
-            this.textBox2.TabIndex = 6;
+            this.txtPrice.Location = new System.Drawing.Point(488, 114);
+            this.txtPrice.Multiline = true;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(272, 23);
+            this.txtPrice.TabIndex = 9;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
-            // textBox3
+            // txtQuantity
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 145);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(272, 23);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(488, 123);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(272, 23);
-            this.textBox5.TabIndex = 9;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(488, 77);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(272, 24);
-            this.textBox6.TabIndex = 8;
+            this.txtQuantity.Location = new System.Drawing.Point(488, 68);
+            this.txtQuantity.Multiline = true;
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(272, 24);
+            this.txtQuantity.TabIndex = 8;
+            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // label4
             // 
@@ -166,29 +144,45 @@
             this.dataGridView1.Size = new System.Drawing.Size(792, 181);
             this.dataGridView1.TabIndex = 12;
             // 
-            // Oders
+            // comboProduct
+            // 
+            this.comboProduct.FormattingEnabled = true;
+            this.comboProduct.Location = new System.Drawing.Point(129, 114);
+            this.comboProduct.Name = "comboProduct";
+            this.comboProduct.Size = new System.Drawing.Size(272, 23);
+            this.comboProduct.TabIndex = 13;
+            this.comboProduct.SelectedIndexChanged += new System.EventHandler(this.comboProduct_SelectedIndexChanged);
+            // 
+            // lblCheckQuantity
+            // 
+            this.lblCheckQuantity.AutoSize = true;
+            this.lblCheckQuantity.Location = new System.Drawing.Point(488, 96);
+            this.lblCheckQuantity.Name = "lblCheckQuantity";
+            this.lblCheckQuantity.Size = new System.Drawing.Size(0, 15);
+            this.lblCheckQuantity.TabIndex = 14;
+            // 
+            // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(787, 416);
+            this.Controls.Add(this.lblCheckQuantity);
+            this.Controls.Add(this.comboProduct);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Oders";
+            this.Name = "Orders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_oder";
             this.Load += new System.EventHandler(this.Oders_Load);
@@ -202,16 +196,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtProductId;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboProduct;
+        private System.Windows.Forms.Label lblCheckQuantity;
     }
 }

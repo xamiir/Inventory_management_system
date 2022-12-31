@@ -22,4 +22,4 @@ C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.pdb
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Dashboard.resources
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.csprojResolveAssemblyReference.cache
 C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Products.resources
-C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Oders.resources
+C:\Users\Abdalla Way\Desktop\inventory\inventory\obj\Debug\inventory.Orders.resources

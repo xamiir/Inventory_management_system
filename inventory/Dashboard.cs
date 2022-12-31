@@ -27,7 +27,7 @@ namespace inventory
         private void label6_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            new Oders().ShowDialog();
+            new Orders().ShowDialog();
             this.Close();
             
         }
